@@ -35,26 +35,7 @@ header p {
   color: #80ff80; /* neon green accent */
 }
 
-/* Navigation */
-nav {
-  background: #003300;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-nav a {
-  color: #80ff80;
-  text-decoration: none;
-  padding: 15px 20px;
-  font-weight: bold;
-  transition: color 0.3s, background 0.3s;
-}
-
-nav a:hover {
-  background: #004d00;
-  color: #ffffff;
-}
 
 /* Container */
 .container {
@@ -76,7 +57,26 @@ section h2 {
   display: inline-block;
   padding-bottom: 5px;
 }
+/* Navigation Bar */
+nav {
+  background: #003300;        /* dark green background */
+  display: flex;              /* flexbox for horizontal layout */
+  justify-content: center;    /* center the links horizontally */
+  flex-wrap: nowrap;          /* keep them in one line */
+}
 
+nav a {
+  color: #80ff80;             /* neon green text */
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: bold;
+  transition: color 0.3s, background 0.3s;
+}
+
+nav a:hover {
+  background: #004d00;        /* darker green hover */
+  color: #ffffff;
+}
 /* Gallery */
 .gallery {
   display: grid;

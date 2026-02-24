@@ -1,69 +1,62 @@
 /* ===========================
-   Global Reset & Base Styles
+   Programmer-Loved Dark Theme
    =========================== */
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Fira Code", "Courier New", monospace;
+  background-color: #111; /* dark background */
+  color: #e0e0e0; /* light text */
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
 }
-/* ===========================
-   Global Image Sizing
-   =========================== */
-img {
-  width: 90px;
-  height: 150px;
-  object-fit: cover; /* keeps proportions while filling the box */
-  border-radius: 5px; /* optional: rounded corners */
-}
-/* ===========================
-   Header & Navigation
-   =========================== */
+
+/* Header */
 header {
-  background: url('banner.jpg') no-repeat center center/cover;
-  color: white;
+  background: #004d00; /* deep green */
+  color: #e0e0e0;
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
 header p {
   font-size: 1.2rem;
-  font-style: italic;
+  color: #80ff80; /* neon green accent */
 }
 
+/* Navigation */
 nav {
-  background: #006400; /* Dark green for NGO theme */
+  background: #003300;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 nav a {
-  color: white;
+  color: #80ff80;
   text-decoration: none;
   padding: 15px 20px;
-  display: block;
-  transition: background 0.3s;
+  font-weight: bold;
+  transition: color 0.3s, background 0.3s;
 }
 
 nav a:hover {
-  background: #228B22; /* Lighter green on hover */
+  background: #004d00;
+  color: #ffffff;
 }
 
-/* ===========================
-   Layout & Sections
-   =========================== */
+/* Container */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -71,104 +64,107 @@ nav a:hover {
   padding: 20px;
 }
 
+/* Sections */
 section {
   margin: 40px 0;
 }
 
 section h2 {
   margin-bottom: 20px;
-  color: #006400;
-  border-bottom: 2px solid #006400;
+  color: #80ff80;
+  border-bottom: 2px solid #004d00;
   display: inline-block;
   padding-bottom: 5px;
 }
 
-/* ===========================
-   Portfolio & Gallery
-   =========================== */
+/* Gallery */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   gap: 15px;
 }
 
-.gallery img {
-  width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s;
+/* Global Image Sizing */
+img {
+  width: 90px;
+  height: 150px;
+  object-fit: cover;   /* prevents distortion */
+  border: 2px solid #004d00;
+  border-radius: 4px;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
-.gallery img:hover {
+img:hover {
   transform: scale(1.05);
+  border-color: #80ff80;
 }
 
-/* ===========================
-   Forms (Contact & Donate)
-   =========================== */
+/* Forms */
 form {
-  background: #fff;
+  background: #1a1a1a;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid #004d00;
+  border-radius: 6px;
 }
 
 form label {
   display: block;
   margin: 10px 0 5px;
-  font-weight: bold;
+  color: #80ff80;
 }
 
 form input, form textarea, form select {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background: #111;
+  border: 1px solid #004d00;
+  color: #e0e0e0;
+  border-radius: 4px;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+  outline: none;
+  border-color: #80ff80;
 }
 
 form button {
-  background: #006400;
-  color: white;
+  background: #004d00;
+  color: #e0e0e0;
   border: none;
   padding: 12px 20px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 4px;
+  font-weight: bold;
   transition: background 0.3s;
 }
 
 form button:hover {
-  background: #228B22;
+  background: #80ff80;
+  color: #111;
 }
 
-/* ===========================
-   Footer
-   =========================== */
+/* Footer */
 footer {
-  background: #333;
-  color: white;
+  background: #003300;
+  color: #e0e0e0;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
 }
 
-footer .social {
-  margin: 10px 0;
-}
-
 footer .social a {
-  color: white;
+  color: #80ff80;
   margin: 0 10px;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 footer .social a:hover {
-  color: #00FF7F;
+  color: #ffffff;
 }
 
-/* ===========================
-   Responsive Design
-   =========================== */
+/* Responsive */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
@@ -180,6 +176,6 @@ footer .social a:hover {
 
   nav a {
     text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(128,255,128,0.2);
   }
-}
+     }
